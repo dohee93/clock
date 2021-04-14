@@ -3,14 +3,15 @@ var clock = document.getElementById('clock');
 var today = new Date();
 
 var days = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+var months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
 
-
-   var year = today.getFullYear();
-   var month = today.getMonth() + 1;
-   var date = today.getDate();
-   var day = today.getDay();
-   var d = days[day];
-   dates.innerHTML = `${year}년 ${month}월 ${date}일 ${d}`;
+var year = today.getFullYear();
+var month = today.getMonth() + 1;
+var date = today.getDate();
+var day = today.getDay();
+var d = days[day];
+var m = months[month];
+dates.innerHTML = `${date} ${m} ${year} &nbsp;${d}`;
 
 
 function getTime() {
