@@ -7,7 +7,7 @@ var months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OC
 function getTime() {
    var today = new Date();
    var year = today.getFullYear();
-   var month = today.getMonth() + 1;
+   var month = today.getMonth();
    var date = today.getDate();
    var day = today.getDay();
    var d = days[day];
@@ -17,9 +17,7 @@ function getTime() {
    var hour = today.getHours();
    var minute = today.getMinutes();
    var second = today.getSeconds();
-   clock.innerHTML = `${hour < 10 ? `0${hour}` : hour}:
-   ${minute < 10 ? `0${minute}` : minute}:
-   ${second < 10 ? `0${second}` : second}`;
+   clock.innerHTML = `${hour < 10 ? `0${hour}` : hour}:${minute < 10 ? `0${minute}` : minute}:${second < 10 ? `0${second}` : second}`;
 }
 
 setInterval(() => {
